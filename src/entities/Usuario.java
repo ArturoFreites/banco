@@ -1,33 +1,27 @@
 package entities;
 
 public abstract class Usuario {
-
-    private Long id;
     private String nombre;
     private String apellido;
     private String direccion;
-    private Integer telefono;
+    private String telefono;
     private String mail;
+    private String usuario;
+    private String password;
 
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String apellido, String direccion, Integer telefono, String mail) {
-        this.id = id;
+    public Usuario(String nombre, String apellido, String direccion, String telefono, String mail, String usuario, String password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
         this.mail = mail;
+        this.usuario = usuario;
+        this.password = password;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
@@ -53,11 +47,11 @@ public abstract class Usuario {
         this.direccion = direccion;
     }
 
-    public Integer getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(Integer telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -67,5 +61,21 @@ public abstract class Usuario {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

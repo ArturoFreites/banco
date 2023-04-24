@@ -5,16 +5,14 @@ import enums.Cargo;
 public class Empleado extends Usuario {
 
     private Cargo cargo;
-    private Sucursal sucursal;
 
     public Empleado() {
         super();
     }
 
-    public Empleado(Long id, String nombre, String apellido, String direccion, Integer telefono, String mail, Cargo cargo, Sucursal sucursal) {
-        super(id, nombre, apellido, direccion, telefono, mail);
+    public Empleado(String nombre, String apellido, String direccion, String telefono, String mail, String usuario, String password, Cargo cargo) {
+        super(nombre, apellido, direccion, telefono, mail, usuario, password);
         this.cargo = cargo;
-        this.sucursal = sucursal;
     }
 
     public Cargo getCargo() {
@@ -25,11 +23,4 @@ public class Empleado extends Usuario {
         this.cargo = cargo;
     }
 
-    public Sucursal getSucursal() {
-        return sucursal;
-    }
-
-    public void setSucursal(Sucursal sucursal) {
-        this.sucursal = sucursal;
-    }
 }

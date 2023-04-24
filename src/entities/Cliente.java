@@ -3,23 +3,22 @@ package entities;
 import java.util.List;
 
 public class Cliente extends Usuario {
-    List<Cuenta> cuentas;
+    List<Integer> numCuentas;
 
     public Cliente() {
         super();
     }
 
-    public Cliente(Long id, String nombre, String apellido, String direccion, Integer telefono, String mail, List<Cuenta> cuentas) {
-        super(id, nombre, apellido, direccion, telefono, mail);
-        this.cuentas = cuentas;
+    public Cliente(String nombre, String apellido, String direccion, String telefono, String mail, String usuario, String password, List<Integer> numCuentas) {
+        super(nombre, apellido, direccion, telefono, mail, usuario, password);
+        this.numCuentas = numCuentas;
     }
 
-    public List<Cuenta> getCuentas() {
-        return cuentas;
+    public List<Integer> getNumCuentas() {
+        return numCuentas;
     }
 
-    public void setCuentas(List<Cuenta> cuentas) {
-        this.cuentas = cuentas;
+    public void setNumCuentas(List<Integer> numCuentas) {
+        this.numCuentas = numCuentas;
     }
-
 }

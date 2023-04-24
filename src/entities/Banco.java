@@ -3,25 +3,20 @@ package entities;
 import java.util.List;
 
 public class Banco {
-    private Integer id;
     private String nombre;
     private List<Sucursal> sucursales;
+    private List<Usuario> usuarios;
+    private List<Cuenta> cuentas;
+
 
     public Banco() {
     }
 
-    public Banco(Integer id, String nombre, List<Sucursal> sucursales) {
-        this.id = id;
+    public Banco(String nombre, List<Sucursal> sucursales, List<Usuario> usuarios, List<Cuenta> cuentas) {
         this.nombre = nombre;
         this.sucursales = sucursales;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+        this.usuarios = usuarios;
+        this.cuentas = cuentas;
     }
 
     public String getNombre() {
@@ -40,12 +35,19 @@ public class Banco {
         this.sucursales = sucursales;
     }
 
-    @Override
-    public String toString() {
-        return "Banco{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", sucursales=" + sucursales +
-                '}';
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public List<Cuenta> getCuentas() {
+        return cuentas;
+    }
+
+    public void setCuentas(List<Cuenta> cuentas) {
+        this.cuentas = cuentas;
     }
 }

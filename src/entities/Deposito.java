@@ -1,36 +1,26 @@
 package entities;
 
-import enums.Agente;
+import enums.AgenteDepositante;
 
 import java.util.Date;
 
 public class Deposito extends Operacion {
-    private Agente agente;
-    private String descripcion;
+    private AgenteDepositante agenteDepositante;
 
     public Deposito() {
         super();
     }
 
-    public Deposito(Double id, Double monto, Date date, Integer numCuentaOrigen, Agente agente, String descripcion) {
-        super(id, monto, date, numCuentaOrigen);
-        this.agente = agente;
-        this.descripcion = descripcion;
+    public Deposito(Double monto, Date date, AgenteDepositante agente) {
+        super(monto, date);
+        this.agenteDepositante = agente;
     }
 
-    public Agente getAgente() {
-        return agente;
+    public AgenteDepositante getAgenteDepositante() {
+        return agenteDepositante;
     }
 
-    public void setAgente(Agente agente) {
-        this.agente = agente;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setAgenteDepositante(AgenteDepositante agenteDepositante) {
+        this.agenteDepositante = agenteDepositante;
     }
 }
